@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dateFormatEntries" >
+        <item>PRETTY_DATE</item>
+        <item>MONTH_DAY_YEAR</item>
+        <item>DAY_MONTH_YEAR</item>
+    </string-array>
+    <!--<string-array name="dateFormat">-->
+        <!--<item>MMM dd, yyyy</item>-->
+        <!--<item>mm/dd/yyyy</item>-->
+        <!--<item>dd/mm/yyyy</item>-->
+    <!--</string-array>-->
+
+    <string-array name="timeFormatEntries">
+        <item>24h</item>
+        <item>12h</item>
+    </string-array>
+    <string-array name="timeFormatEntryValues">
+        <item>FORMAT_24H</item>
+        <item>FORMAT_12H</item>
+    </string-array>
+
+    <string-array name="hours">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="minutes">
+        <item>00</item>
+        <item>05</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+
+    <string-array name="states">
+        <item>Today</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="feedback">
+        <item>Bug</item>
+        <item>Request</item>
+        <item>Comment</item>
+    </string-array>
+
+
+</resources>

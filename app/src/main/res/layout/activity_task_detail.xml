@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_task_detail_container"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_task_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ToolbarTheme"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:titleTextAppearance="@style/ToolbarTheme.SmallTitleText"
+        >
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <rs.com.loctionbased.reminder.app.views.BetterNestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/activity_task_detail_done_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:tint="@color/fab_accept_green"
+                        app:srcCompat="@drawable/icon_check"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        />
+
+                    <TextView
+                        android:id="@+id/activity_task_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/activity_task_detail_done_button"
+                        android:layout_toStartOf="@id/activity_task_detail_done_button"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Example title of Task"
+                        android:textColor="@color/gray_900"
+                        android:textSize="@dimen/text_size_biggest"
+                        android:transitionName="@string/transition_task_list_title"/>
+
+                    <TextView
+                        android:id="@+id/activity_task_detail_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/activity_task_detail_title"
+                        android:layout_marginTop="1dp"
+                        android:text="Example description of task"
+                        android:textSize="@dimen/text_size_medium"
+                        android:transitionName="@string/transition_task_list_description"/>
+
+                    <ImageView
+                        android:id="@+id/activity_task_detail_category"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_toRightOf="@id/activity_task_detail_description"
+                        android:layout_below="@id/activity_task_detail_title"
+                        app:srcCompat="@drawable/icon_category_personal"
+                        android:transitionName="@string/transition_task_list_category"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/activity_task_detail_done_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_below="@id/activity_task_detail_description"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/item_task_icon_size"
+                            android:layout_height="@dimen/item_task_icon_size"
+                            app:srcCompat="@drawable/icon_success_snackbar"
+                            android:tint="@color/swipe_refresh_green" />
+
+                        <TextView
+                            android:id="@+id/activity_task_detail_done"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginStart="12dp"
+                            android:text="Yesterday, 3rd Feb 2017"
+                            android:textColor="@color/swipe_refresh_green"
+                            android:textSize="@dimen/text_size_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/activity_task_detail_overdue_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_below="@id/activity_task_detail_description"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/item_task_icon_size"
+                            android:layout_height="@dimen/item_task_icon_size"
+                            app:srcCompat="@drawable/icon_cross"
+                            android:tint="@color/swipe_refresh_red" />
+
+                        <TextView
+                            android:id="@+id/activity_task_detail_overdue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginStart="12dp"
+                            android:text="Yesterday, 3rd Feb 2017"
+                            android:textColor="@color/swipe_refresh_red"
+                            android:textSize="@dimen/text_size_medium" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/activity_task_detail_reminder_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lines="1"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_small"
+                    android:text="Reminder type"
+                    android:visibility="gone"
+                    />
+
+                <FrameLayout
+                    android:id="@+id/activity_task_detail_reminder_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/activity_task_detail_attachments_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lines="1"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_small"
+                    android:text="@string/menu_activity_task_subtitle_attachments"
+                    android:visibility="gone"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activity_task_detail_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="-12dp"
+                    android:layout_marginStart="-12dp"
+                    android:layout_marginBottom="24dp"
+                    />
+
+
+
+            </LinearLayout>
+        </rs.com.loctionbased.reminder.app.views.BetterNestedScrollView>
+
+        
+        <com.github.clans.fab.FloatingActionMenu
+            xmlns:fab="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/activity_task_detail_add_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            fab:menu_buttonSpacing="6dp"
+            fab:menu_fab_size="normal"
+            fab:menu_showShadow="false"
+            fab:menu_colorNormal="@color/primary"
+            fab:menu_colorPressed="@color/primary"
+            fab:menu_animationDelayPerItem="30"
+            fab:menu_icon="@drawable/icon_attachment"
+            fab:menu_backgroundColor="@android:color/transparent"
+            android:layout_margin="@dimen/fab_margin"
+            >
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/activity_task_detail_add_audio_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_audio_fab_mini"
+                fab:fab_showShadow="false"
+                fab:fab_colorNormal="@color/primary"
+                fab:fab_colorPressed="@color/primary"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/activity_task_detail_add_image_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_image_fab_mini"
+                fab:fab_showShadow="false"
+                android:visibility="gone"
+                fab:fab_colorNormal="@color/primary"
+                fab:fab_colorPressed="@color/primary"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/activity_task_detail_add_link_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_link_fab_mini"
+                fab:fab_showShadow="false"
+                fab:fab_colorNormal="@color/primary"
+                fab:fab_colorPressed="@color/primary"
+                fab:fab_size="mini"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/activity_task_detail_add_text_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_text_fab_mini"
+                fab:fab_showShadow="false"
+                fab:fab_colorNormal="@color/primary"
+                fab:fab_colorPressed="@color/primary"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/activity_task_detail_add_list_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_list_fab_mini"
+                fab:fab_showShadow="false"
+                fab:fab_colorNormal="@color/primary"
+                fab:fab_colorPressed="@color/primary"
+                fab:fab_size="mini" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

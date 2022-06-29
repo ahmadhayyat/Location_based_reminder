@@ -1,0 +1,111 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+
+        <item name="windowActionModeOverlay">true</item>                    <!--Put contextual action bar over toolbar, not above it-->
+        <item name="actionModeBackground">@color/primary</item>     <!--Contextual action bar background color-->
+    </style>
+
+    <!--TODO: check this code, it doesnt work-->
+
+    <style name="SpinnerStyle" parent="AppTheme">
+        <item name="colorControlNormal">@color/gray_400</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@android:color/white</item>                   <!-- Text color of toolbar title text -->
+        <item name="android:textColorSecondary">@android:color/white</item>                 <!-- Text color of navigation drawer icon-->
+        <item name="color">@android:color/white</item>                                      <!-- Text color of navigation drawer icon-->
+        <item name="actionMenuTextColor">@android:color/white</item>                        <!-- Menu item color-->
+    </style>
+
+    <style name="ToolbarTheme.SmallTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Preference Fragment Styles -->
+    <style name="AppPreferenceTheme" parent="@style/PreferenceFixTheme.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+    </style>
+
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--ABOUT ME SECTION-->
+
+    <style name="Card">
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardMaxElevation">@dimen/card_elevation</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="Cover">
+        <item name="android:layout_height">@dimen/profile_picture_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+
+    <style name="TextLabel">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Name" parent="@style/TextLabel">
+        <item name="android:maxLines">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+
+    <style name="SubTitle" parent="@style/TextLabel">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Social" parent="@style/TextLabel">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">3dp</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "931536297872",
+    "project_id": "location-based-reminder-e64c8",
+    "storage_bucket": "location-based-reminder-e64c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931536297872:android:8cb0511b5e973893c2dd15",
+        "android_client_info": {
+          "package_name": "rs.com.loctionbased.reminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931536297872-ln826lsrmu2ffdq99dotehfs2ltps9ol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBleg-lYKjJ5Fb1BKgshLycl8InyZlISEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931536297872-ln826lsrmu2ffdq99dotehfs2ltps9ol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

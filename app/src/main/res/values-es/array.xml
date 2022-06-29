@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dateFormatEntries" >
+        <item>PRETTY_DATE</item>
+        <item>MONTH_DAY_YEAR</item>
+        <item>DAY_MONTH_YEAR</item>
+    </string-array>
+    <!--<string-array name="dateFormat">-->
+        <!--<item>MMM dd, yyyy</item>-->
+        <!--<item>mm/dd/yyyy</item>-->
+        <!--<item>dd/mm/yyyy</item>-->
+    <!--</string-array>-->
+
+    <string-array name="timeFormatEntries">
+        <item>24h</item>
+        <item>12h</item>
+    </string-array>
+    <string-array name="timeFormatEntryValues">
+        <item>FORMAT_24H</item>
+        <item>FORMAT_12H</item>
+    </string-array>
+
+
+
+</resources>

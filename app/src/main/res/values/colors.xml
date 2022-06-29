@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="header_title_red">#ff3333</color>
+
+    <color name="icons_disabled">#BDBDBD</color>
+    <color name="icons_enabled">#212121</color>
+
+    <color name="map_circle_shade">#44FF0000</color>
+    <color name="map_circle_stroke">#FFFF0000</color>
+
+    <color name="danger">#cf401c</color>
+    <color name="fab_record_red">#FD4747</color>
+    <color name="fab_accept_green">#4BAE4F</color>
+
+    <color name="primary">#7c4dff</color>
+    <color name="washed">#768ca1</color>1515
+    <color name="primary_dark">#6200ea</color>
+    <color name="primary_light">#b388ff</color>
+    <color name="blue">#42a5f5</color>
+    <color name="purple">#b864f1</color>
+    <color name="gold">#ff7c02</color>
+
+    <color name="accent">#00BCD4</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+
+    <color name="category_business">#625C38</color>
+    <color name="category_personal">#C8E800</color>
+    <color name="category_health">#00BDD3</color>
+    <color name="category_repairs">#FD392D</color>
+    <color name="category_shopping">#B44781</color>
+
+
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+
+    <color name="swipe_refresh_green">#7cb342</color>
+    <color name="swipe_refresh_red">#e53935</color>
+    <color name="swipe_refresh_yellow">#fdd835</color>
+
+
+    <color name="snackbar_error_background">#e53935</color>
+    <color name="snackbar_notice_background">#7c4dff</color>
+    <color name="snackbar_success_background">#43A047</color>
+
+
+    <color name="stroke">#b4b4b4</color>
+
+</resources>

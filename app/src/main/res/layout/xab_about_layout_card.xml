@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_holder"
+    style="@style/Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/cover"
+            style="@style/Cover"
+            app:srcCompat="@mipmap/profile_cover" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <rs.com.loctionbased.reminder.views.CircleImageView
+                android:id="@+id/photo"
+                android:layout_width="@dimen/profile_picture_size"
+                android:layout_height="@dimen/profile_picture_size"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/razasaeed" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/Name"
+                android:paddingTop="10dp"
+                android:text="Muhammad Raza Saeed" />
+
+            <TextView
+                android:id="@+id/sub_title"
+                style="@style/SubTitle"
+                android:text="Just a sub title"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/contactinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/emailheading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email:"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/emailtxt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="razasaeed135@gmail.com"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contactheading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Contact:"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/contacttxt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="+923165994525"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/brief"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="This is as short message saying who you are and what you like to do."
+                android:textSize="16sp" />
+
+            <rs.com.loctionbased.reminder.views.AutoFitGridLayout
+                android:id="@+id/links"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/social_media_divider"
+                android:gravity="center"
+                android:paddingBottom="@dimen/social_media_vertical_padding"
+                android:paddingTop="@dimen/social_media_vertical_padding">
+
+            </rs.com.loctionbased.reminder.views.AutoFitGridLayout>
+
+
+            <LinearLayout
+                android:id="@+id/app_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/social_media_divider"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/social_media_vertical_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/appiconone"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/memoicon" />
+
+                        <ImageView
+                            android:id="@+id/app_icon"
+                            android:layout_width="@dimen/app_icon_size"
+                            android:layout_height="@dimen/app_icon_size"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/roundlogo"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/appiconone"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/app_name"
+                                style="@style/Name"
+                                android:layout_width="wrap_content"
+                                android:gravity="left"
+                                android:text="Your App Name" />
+
+                            <TextView
+                                android:id="@+id/app_title"
+                                style="@style/TextLabel"
+                                android:gravity="left"
+                                android:text="Just a sub title" />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <rs.com.loctionbased.reminder.views.AutoFitGridLayout
+                    android:id="@+id/actions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                </rs.com.loctionbased.reminder.views.AutoFitGridLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</androidx.cardview.widget.CardView>

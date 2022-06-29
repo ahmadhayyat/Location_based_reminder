@@ -1,0 +1,140 @@
+package rs.com.loctionbased.reminder.model;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Calendar;
+
+import rs.com.loctionbased.reminder.enums.ReminderType;
+import rs.com.loctionbased.reminder.enums.TaskCategory;
+import rs.com.loctionbased.reminder.enums.TaskStatus;
+import rs.com.loctionbased.reminder.model.attachment.Attachment;
+import rs.com.loctionbased.reminder.model.reminder.Reminder;
+
+public class Task implements Serializable {
+
+    private int id;
+    private TaskStatus status;
+    private String title;
+    private String description;
+    private TaskCategory category;
+    private ReminderType reminderType;
+    private Reminder reminder;
+    private Calendar doneDate;
+    private ArrayList<Attachment> attachments;
+
+    public Task() {
+        this.id = -1;
+        this.status = TaskStatus.UNPROGRAMMED;
+        this.title = "";
+        this.description = "";
+        this.reminderType = ReminderType.NONE;
+        this.attachments = new ArrayList<>();
+    }
+
+    public Task(@NonNull TaskStatus status, @NonNull String title, @NonNull String description, @NonNull TaskCategory category, @NonNull ReminderType reminderType, @Nullable Reminder reminder, @Nullable Calendar doneDate) {
+        this.status = status;
+        this.title = title;
+        this.description = description;
+        this.category = category;
+        this.reminderType = reminderType;
+        this.reminder = reminder;
+        this.doneDate = doneDate;
+        this.attachments = new ArrayList<>();
+    }
+
+    public Task(int id, @NonNull TaskStatus status, @NonNull String title, @NonNull String description, @NonNull TaskCategory category, @NonNull ReminderType reminderType, @Nullable Reminder reminder, @Nullable Calendar doneDate) {
+        this(status, title, description, category, reminderType, reminder, doneDate);
+        this.id = id;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public TaskStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TaskStatus status) {
+        this.status = status;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public TaskCategory getCategory() {
+        return category;
+    }
+
+    public void setCategory(TaskCategory category) {
+        this.category = category;
+    }
+
+    public ReminderType getReminderType() {
+        return reminderType;
+    }
+
+    public void setReminderType(ReminderType reminderType) {
+        this.reminderType = reminderType;
+    }
+
+    public Reminder getReminder() {
+        return reminder;
+    }
+
+    public void setReminder(Reminder reminder) {
+        this.reminder = reminder;
+    }
+
+    public Calendar getDoneDate() {
+        return doneDate;
+    }
+
+    public void setDoneDate(Calendar doneDate) {
+        this.doneDate = doneDate;
+    }
+
+    public ArrayList<Attachment> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(ArrayList<Attachment> attachments) {
+        this.attachments = attachments;
+    }
+
+    public void addAttachment(Attachment attachment) {
+        this.attachments.add(attachment);
+    }
+
+
+    @Override
+    public String toString() {
+        String res = "Task ID=" + id + "\r\n Status= " + status.name() + "\r\n Title=" + title + "\r\n Description=" + description + "\r\n Category=" + category.name() + "\r\n";
+        res += " ReminderType=" + reminderType.name();
+        if (reminder != null) res += " Reminder=" + reminder.toString() + "\r\n";
+        if (doneDate != null) res += " DoneDate=" + doneDate.toString();
+        res += " Attachments=" + attachments.size();
+        return res;
+    }
+}

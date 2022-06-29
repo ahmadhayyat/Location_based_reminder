@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_habit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HabitsTracker.HabitView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/habit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/proximabold"
+                android:padding="5dp"
+                android:text="Edit Habit"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/primary"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/selection_layout"
+                android:background="@color/primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/selection_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/name_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:fontFamily="@font/proximabold"
+                    android:text="NAME"
+                    android:textColor="@color/primary"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/habitName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:allowUndo="true"
+                    android:autoText="true"
+                    android:fontFamily="@font/proximareg"
+                    android:hint="Read, Exercise .."
+                    android:inputType="textPersonName"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@android:color/background_light"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/repeat_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:clickable="true"
+                    android:fontFamily="@font/proximabold"
+                    android:text="REPEATS"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/primary"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/repeat_days"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.7"
+                        android:clickable="true"
+                        android:fontFamily="@font/proximareg"
+                        android:onClick="repeatClick"
+                        android:text="M, T, W, Th, F"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:background="@android:color/transparent"
+                        android:onClick="repeatClick"
+                        android:scaleType="fitEnd"
+                        app:srcCompat="@drawable/arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/target_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".9"
+                    android:fontFamily="@font/proximabold"
+                    android:text="WEEKLY TARGET"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/primary"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:orientation="horizontal">
+
+                    <SeekBar
+                        android:id="@+id/target_seekbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:max="6" />
+
+                    <TextView
+                        android:id="@+id/seekbar_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="7"
+                        android:textColor="@color/primary"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/reminder_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proximabold"
+                    android:text="REMINDERS"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/primary"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Switch
+                        android:id="@+id/reminder_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:paddingRight="5dp"
+                        android:switchMinWidth="80dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reminders_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proximareg"
+                android:text="Reminders are on repeat days at the selected time."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/time_wheel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.aigestudio.wheelpicker.WheelPicker
+                        android:id="@+id/wheel_hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="118dp"
+                        android:layout_centerInParent="true"
+                        app:wheel_atmospheric="true"
+                        app:wheel_curtain="true"
+                        app:wheel_curtain_color="#28ffffff"
+                        app:wheel_curved="true"
+                        app:wheel_cyclic="true"
+                        app:wheel_indicator="false"
+                        app:wheel_item_align="center"
+                        app:wheel_item_text_color="@color/primary"
+                        app:wheel_item_text_size="25sp"
+                        app:wheel_maximum_width_text="20dp"
+                        app:wheel_same_width="false"
+                        app:wheel_visible_item_count="4" />
+
+                    <com.aigestudio.wheelpicker.WheelPicker
+                        android:id="@+id/wheel_minutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        app:wheel_atmospheric="true"
+                        app:wheel_curtain="true"
+                        app:wheel_curtain_color="#28ffffff"
+                        app:wheel_curved="true"
+                        app:wheel_cyclic="true"
+                        app:wheel_indicator="false"
+                        app:wheel_item_align="center"
+                        app:wheel_item_text_color="@color/primary"
+                        app:wheel_item_text_size="25dp"
+                        app:wheel_maximum_width_text="20dp"
+                        app:wheel_visible_item_count="4" />
+
+                    <com.aigestudio.wheelpicker.WheelPicker
+                        android:id="@+id/wheel_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="118dp"
+                        android:layout_centerInParent="true"
+                        app:wheel_atmospheric="true"
+                        app:wheel_curtain="true"
+                        app:wheel_curtain_color="#28ffffff"
+                        app:wheel_curved="true"
+                        app:wheel_cyclic="false"
+                        app:wheel_indicator="false"
+                        app:wheel_item_align="center"
+                        app:wheel_item_text_color="@color/primary"
+                        app:wheel_item_text_size="25sp"
+                        app:wheel_maximum_width_text="20dp"
+                        app:wheel_visible_item_count="4" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confirm_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/selection_layout"
+            android:layout_marginTop="54dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/confirm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/proximabold"
+                android:background="@drawable/buttonbg"
+                android:onClick="updateButtonClick"
+                android:text="Update"
+                android:textColor="@color/primary"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

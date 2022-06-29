@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_place_container"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="72dp">
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/item_place_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="@dimen/item_place_map_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        map:cameraZoom="13"
+        map:mapType="normal"
+        map:liteMode="true"
+        tools:context="rs.com.loctionbased.reminder.app.activities.PlaceListActivity" />
+
+
+    <LinearLayout
+        android:id="@+id/item_place_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/item_place_map"
+        android:layout_toStartOf="@id/item_place_map"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="@dimen/item_place_icon_size"
+            android:layout_height="@dimen/item_place_icon_size"
+            android:layout_marginRight="6dp"
+            android:layout_marginEnd="6dp"
+            map:srcCompat="@drawable/icon_round_location"
+            />
+        <TextView
+            android:id="@+id/item_place_alias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_size_bigger"
+            android:text="Example Place Alias"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/item_place_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_toLeftOf="@id/item_place_map"
+        android:layout_toStartOf="@id/item_place_map"
+        android:layout_below="@id/item_place_top_container"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/text_size_small"
+        android:text="Example place address Example place addres"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    /* About Activity */
+    <dimen name="activity_about_app_logo">192dp</dimen>
+    <dimen name="activity_about_app_title">22sp</dimen>
+    <dimen name="activity_about_app_text_links">14sp</dimen>
+
+    /* Place List Activity */
+    <dimen name="item_place_icon_size">36dp</dimen>
+    <dimen name="item_place_map_width">128dp</dimen>
+
+    /* Task Activity */
+    <dimen name="item_task_icon_size">24dp</dimen>
+
+
+    /* Task List Activity */
+    <dimen name="item_task_unprogrammed_category_icon_size">36dp</dimen>
+    <dimen name="item_task_category_icon_size">50dp</dimen>
+    <dimen name="item_task_attachment_icon_size">18dp</dimen>
+    <dimen name="item_task_other_icon_size">14dp</dimen>
+
+
+    /* Text sizes */
+    <dimen name="text_size_huge">26sp</dimen>
+    <dimen name="text_size_biggest">24sp</dimen>
+    <dimen name="text_size_bigger">20sp</dimen>
+    <dimen name="text_size_big">16sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+
+    /* Dialog Record audio*/
+
+    <dimen name="dialog_record_audio_height">180dp</dimen>
+    <dimen name="dialog_record_audio_width">280dp</dimen>
+
+
+    /* Dialog Select Camera Gallery */
+
+    <dimen name="app_icon_size">90dp</dimen>
+    <dimen name="profile_picture_size">100dp</dimen>
+    <dimen name="profile_picture_border">3dp</dimen>
+
+    <dimen name="card_radius">3dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+
+    <dimen name="social_media_vertical_padding">10dp</dimen>
+    <dimen name="icon_size">25dp</dimen>
+
+</resources>

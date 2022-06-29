@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HabitsTracker.AddHabit">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/gradient1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/new_habit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/proximabold"
+                android:padding="5dp"
+                android:text="New Habit"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/primary"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/selection_layout"
+                android:background="@color/primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/selection_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.79"
+                    android:fontFamily="@font/proximabold"
+                    android:text="NAME"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/primary"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/habitName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.54"
+                    android:allowUndo="true"
+                    android:fontFamily="@font/proximareg"
+                    android:autoText="true"
+                    android:ems="10"
+                    android:hint="Read, Exercise .."
+                    android:inputType="textPersonName"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@android:color/background_light"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="repeatClick"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/repeat_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.41"
+                    android:fontFamily="@font/proximabold"
+                    android:text="Repeats"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/repeat_holder"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.40"
+                    android:clickable="true"
+                    android:ems="10"
+                    android:fontFamily="@font/proximareg"
+                    android:inputType="none|textPersonName"
+                    android:onClick="repeatClick"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/target_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".9"
+                    android:fontFamily="@font/proximabold"
+                    android:text="WEEKLY TARGET"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/primary"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:orientation="horizontal">
+
+                    <SeekBar
+                        android:id="@+id/target_seekbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:max="6" />
+
+                    <TextView
+                        android:id="@+id/seekbar_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7"
+                        android:textColor="@color/primary"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/reminder_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/proximabold"
+                    android:text="REMINDERS"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/primary"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Switch
+                        android:id="@+id/reminder_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:paddingRight="5dp"
+                        android:switchMinWidth="80dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proximareg"
+                android:text="Reminders are on repeat days at the selected time."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.aigestudio.wheelpicker.WheelPicker
+                        android:id="@+id/wheel_hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="118dp"
+                        android:layout_centerInParent="true"
+                        app:wheel_atmospheric="true"
+                        app:wheel_curtain="true"
+                        app:wheel_curtain_color="#28ffffff"
+                        app:wheel_curved="true"
+                        app:wheel_cyclic="true"
+                        app:wheel_indicator="false"
+                        app:wheel_item_align="center"
+                        app:wheel_item_text_color="@color/primary"
+                        app:wheel_item_text_size="25sp"
+                        app:wheel_maximum_width_text="20dp"
+                        app:wheel_same_width="false"
+                        app:wheel_visible_item_count="4" />
+
+                    <com.aigestudio.wheelpicker.WheelPicker
+                        android:id="@+id/wheel_minutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        app:wheel_atmospheric="true"
+                        app:wheel_curtain="true"
+                        app:wheel_curtain_color="#28ffffff"
+                        app:wheel_curved="true"
+                        app:wheel_cyclic="true"
+                        app:wheel_indicator="false"
+                        app:wheel_item_align="center"
+                        app:wheel_item_text_color="@color/primary"
+                        app:wheel_item_text_size="25dp"
+                        app:wheel_maximum_width_text="20dp"
+                        app:wheel_visible_item_count="4" />
+
+                    <com.aigestudio.wheelpicker.WheelPicker
+                        android:id="@+id/wheel_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="118dp"
+                        android:layout_centerInParent="true"
+                        app:wheel_atmospheric="true"
+                        app:wheel_curtain="true"
+                        app:wheel_curtain_color="#28ffffff"
+                        app:wheel_curved="true"
+                        app:wheel_cyclic="false"
+                        app:wheel_indicator="false"
+                        app:wheel_item_align="center"
+                        app:wheel_item_text_color="@color/primary"
+                        app:wheel_item_text_size="25sp"
+                        app:wheel_maximum_width_text="20dp"
+                        app:wheel_visible_item_count="4" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confirm_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/selection_layout"
+            android:layout_marginTop="54dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/confirm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/proximabold"
+                android:background="@drawable/buttonbg"
+                android:onClick="add"
+                android:text="Add"
+                android:textColor="@color/primary" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
