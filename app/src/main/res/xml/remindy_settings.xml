@@ -25,8 +25,8 @@
         android:defaultValue="MINUTES_5"/>
     <!--<SwitchPreference-->
         <!--android:key="@string/settings_show_location_based_reminder_in_new_tab_key"-->
-        <!--android:title="@string/settings_show_location_based_reminder_in_new_tab_title"-->
-        <!--android:defaultValue="false"/>-->
+    <!--android:title="@string/settings_show_location_based_reminder_in_new_tab_title"-->
+    <!--android:defaultValue="false"/>-->
     <Preference
         android:key="@string/settings_backup_key"
         android:title="@string/settings_backup_title"
@@ -35,22 +35,26 @@
         android:key="@string/settings_restore_key"
         android:title="@string/settings_restore_title"
         android:summary="@string/settings_restore_summary" />
+    <Preference
+        android:key="@string/notification_setting"
+        android:summary="Notification Setting"
+        android:title="Notification Setting" />
 
     <!--<ve.com.abicelis.pingwidget.app.preference.ThemePreference-->
-        <!--android:key="@string/fragment_widget_configure_theme_key"-->
-        <!--android:title="@string/fragment_widget_configure_theme_title"-->
-        <!--android:summary="@string/widget_theme_summary_blue_yellow"/>-->
+    <!--android:key="@string/fragment_widget_configure_theme_key"-->
+    <!--android:title="@string/fragment_widget_configure_theme_title"-->
+    <!--android:summary="@string/widget_theme_summary_blue_yellow"/>-->
 
 
-   <!-- <PreferenceCategory android:title="@string/settings_category_about_title"/>
-    <Preference
-        android:key="@string/settings_about_key"
-        android:title="@string/settings_about_title"
-        android:summary="@string/settings_about_summary"/>
-    <Preference
-        android:key="@string/remindy_settings_rate_key"
-        android:title="@string/remindy_settings_rate_title"
-        android:summary="@string/remindy_settings_rate_summary"/>-->
+    <!-- <PreferenceCategory android:title="@string/settings_category_about_title"/>
+     <Preference
+         android:key="@string/settings_about_key"
+         android:title="@string/settings_about_title"
+         android:summary="@string/settings_about_summary"/>
+     <Preference
+         android:key="@string/remindy_settings_rate_key"
+         android:title="@string/remindy_settings_rate_title"
+         android:summary="@string/remindy_settings_rate_summary"/>-->
 <!--
     <Preference
         android:key="@string/remindy_settings_contact_key"

@@ -120,13 +120,6 @@ public class ReminderFragment extends Fragment implements TaskDataInterface {
         Bundle bundle = new Bundle();
         mReminderType = ReminderType.values()[position];
         switch (mReminderType) {
-            case ONE_TIME:
-                mReminder = (useReminderFlag ? mTask.getReminder() : new OneTimeReminder());
-                mFragment = new EditOneTimeReminderFragment();
-                bundle.putSerializable(EditRepeatingReminderFragment.REMINDER_ARGUMENT, mReminder);
-                mFragment.setArguments(bundle);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_reminder_reminder_placeholder, mFragment).commit();
-                break;
 
             case REPEATING:
                 mReminder = (useReminderFlag ? mTask.getReminder() : new RepeatingReminder());

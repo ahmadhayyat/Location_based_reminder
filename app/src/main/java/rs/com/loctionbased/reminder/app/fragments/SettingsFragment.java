@@ -4,14 +4,14 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-
-import android.widget.Toast;
 
 import com.takisoft.fix.support.v7.preference.PreferenceFragmentCompat;
 
@@ -20,7 +20,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import rs.com.loctionbased.reminder.R;
-import rs.com.loctionbased.reminder.act.ActivitySample;
+import rs.com.loctionbased.reminder.app.Constants;
 import rs.com.loctionbased.reminder.app.activities.PlaceListActivity;
 import rs.com.loctionbased.reminder.app.activities.SettingsActivity;
 import rs.com.loctionbased.reminder.database.RemindyDbHelper;
@@ -41,6 +41,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     private ListPreference mTriggerMinutesBeforeNotification;
     private Preference mBackup;
     private Preference mRestore;
+    private Preference mNotification;
     private Preference mAbout;
     private Preference mRate;
     private Preference mContact;
@@ -97,17 +98,26 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
                 String[] nonGrantedPermissions = PermissionUtil.checkIfPermissionsAreGranted(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
-                if(nonGrantedPermissions != null) {
+                if (nonGrantedPermissions != null) {
                     requestPermissions(nonGrantedPermissions, REQUEST_CODE_WRITE_STORAGE_IMPORT);
-                }else {
+                } else {
                     handleImportAction();
                 }
                 return false;
             }
         });
 
-
-       // mAbout = findPreference(getResources().getString(R.string.settings_about_key));
+        mNotification = findPreference(getString(R.string.notification_setting));
+        mNotification.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent();
+            intent.setAction("android.settings.CHANNEL_NOTIFICATION_SETTINGS");
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra("android.provider.extra.CHANNEL_ID", Constants.NOTIFICATION_CHANNEL_ID);
+            intent.putExtra("android.provider.extra.APP_PACKAGE", getContext().getPackageName());
+            startActivity(intent);
+            return false;
+        });
+        // mAbout = findPreference(getResources().getString(R.string.settings_about_key));
 /*
         mAbout.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override

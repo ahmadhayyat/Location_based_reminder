@@ -39,8 +39,6 @@ import java.util.Locale;
 import rs.com.loctionbased.reminder.R;
 import rs.com.loctionbased.reminder.app.adapters.AttachmentAdapter;
 import rs.com.loctionbased.reminder.app.fragments.LocationBasedReminderDetailFragment;
-import rs.com.loctionbased.reminder.app.fragments.OneTimeReminderDetailFragment;
-import rs.com.loctionbased.reminder.app.fragments.RepeatingReminderDetailFragment;
 import rs.com.loctionbased.reminder.app.holders.ImageAttachmentViewHolder;
 import rs.com.loctionbased.reminder.database.RemindyDAO;
 import rs.com.loctionbased.reminder.enums.DateFormat;
@@ -247,20 +245,6 @@ public class TaskDetailActivity extends AppCompatActivity implements View.OnClic
         Fragment fragment = null;
 
         switch (mTask.getReminderType()) {
-            case ONE_TIME:
-                mReminderSubtitle.setText(getResources().getString(mTask.getReminderType().getFriendlyNameRes()));
-                fragment = new OneTimeReminderDetailFragment();
-                bundle.putSerializable(OneTimeReminderDetailFragment.REMINDER_TO_DISPLAY, mTask.getReminder());
-                fragment.setArguments(bundle);
-                getSupportFragmentManager().beginTransaction().replace(R.id.activity_task_detail_reminder_placeholder, fragment).commit();
-                break;
-
-            case REPEATING:
-                fragment = new RepeatingReminderDetailFragment();
-                bundle.putSerializable(RepeatingReminderDetailFragment.REMINDER_TO_DISPLAY, mTask.getReminder());
-                fragment.setArguments(bundle);
-                getSupportFragmentManager().beginTransaction().replace(R.id.activity_task_detail_reminder_placeholder, fragment).commit();
-                break;
 
             case LOCATION_BASED:
                 fragment = new LocationBasedReminderDetailFragment();
