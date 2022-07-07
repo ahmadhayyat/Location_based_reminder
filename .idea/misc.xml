@@ -6,6 +6,15 @@
         <entry key="..\:/TasksReminder/app/src/main/res/menu/menu_home_contextual.xml" value="0.35555555555555557" />
         <entry key="..\:/TasksReminder/app/src/main/res/menu/menu_home_no_sort.xml" value="0.37135416666666665" />
         <entry key="..\:/TasksReminder/app/src/main/res/menu/menu_home_sort.xml" value="0.37135416666666665" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/layout/activity_home.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/layout/fragment_home_list.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/layout/fragment_reminder.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/layout/fragment_task.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/menu/menu_home_contextual.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/menu/menu_home_no_sort.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/menu/menu_home_sort.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/menu/menu_task.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/user/Documents/Location_based_reminder/app/src/main/res/menu/menu_task_detail.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/drawable/settings.xml" value="0.1315" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/activity_add_habit.xml" value="0.2520833333333333" />

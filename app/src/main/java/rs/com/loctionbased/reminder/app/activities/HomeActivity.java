@@ -26,7 +26,6 @@ import java.util.List;
 import rs.com.loctionbased.reminder.Customization.FontsOverride;
 import rs.com.loctionbased.reminder.HabitsTracker.MainActivity;
 import rs.com.loctionbased.reminder.R;
-import rs.com.loctionbased.reminder.act.ActivitySample;
 import rs.com.loctionbased.reminder.app.adapters.HomeViewPagerAdapter;
 import rs.com.loctionbased.reminder.app.fragments.HomeListFragment;
 import rs.com.loctionbased.reminder.app.services.NotificationIntentService;
@@ -188,10 +187,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivityForResult(goToSettingsActivity, SettingsActivity.SETTINGS_ACTIVITY_REQUEST_CODE);
                 return true;
 
-            case R.id.menu_home_about:
-                Intent goToAboutActivity = new Intent(getApplicationContext(), ActivitySample.class);
-                startActivity(goToAboutActivity);
-                return true;
             case R.id.menu_home_Logout:
                 FirebaseAuth.getInstance().signOut();
                 Intent i = new Intent(HomeActivity.this, LoginActivity.class);
@@ -199,29 +194,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 finish();
                 return true;
-          /*  case R.id.menu_home_rate:
-                Intent playStoreIntent = new Intent(Intent.ACTION_VIEW);
-                playStoreIntent.setData(Uri.parse(getResources().getString(R.string.url_market)));
-                startActivity(playStoreIntent);
-                return true;*/
-
-            /*case R.id.menu_home_share:
-                try {
-                    Intent i = new Intent(Intent.ACTION_SEND);
-                    i.setType("text/plain");
-                    i.putExtra(Intent.EXTRA_SUBJECT, "Task Reminder (Location and Time based) app");
-                    String sAux = "Let me recommend you this application\n\n";
-                    sAux = sAux + "https://play.google.com/store/apps/details?id=rs.com.razasaeed.memorizeme";
-                    i.putExtra(Intent.EXTRA_TEXT, sAux);
-                    startActivity(Intent.createChooser(i, "choose one"));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }*/
-
-
         }
         return super.onOptionsItemSelected(item);
     }
+    
 
     @Override
     public void onClick(View v) {

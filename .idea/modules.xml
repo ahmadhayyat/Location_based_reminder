@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Location_based_reminder.iml" filepath="$PROJECT_DIR$/.idea/Location_based_reminder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Location_based_reminder.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Location_based_reminder.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Location_based_reminder.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Location_based_reminder.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Location_based_reminder.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Location_based_reminder.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Location_based_reminder.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Location_based_reminder.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
